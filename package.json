@@ -1,8 +1,7 @@
 {
-  "name": "hexo-generator-feed",
+  "name": "hexo-generator-mailchimp",
   "version": "1.1.0",
-  "description": "Feed generator plugin for Hexo",
-  "main": "index",
+  "description": "Modified hexo-generator-feed",
   "scripts": {
     "eslint": "eslint .",
     "jscs": "jscs .",
@@ -12,14 +11,7 @@
   "directories": {
     "lib": "./lib"
   },
-  "repository": "hexojs/hexo-generator-feed",
-  "keywords": [
-    "hexo",
-    "rss",
-    "feed",
-    "atom",
-    "generator"
-  ],
+  "repository": "f213/hexo-generator-mailchimp",
   "author": "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)",
   "license": "MIT",
   "dependencies": {

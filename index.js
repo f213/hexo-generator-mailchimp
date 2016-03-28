@@ -4,21 +4,10 @@
 var assign = require('object-assign');
 var pathFn = require('path');
 
-var config = hexo.config.feed = assign({
-  type: 'atom',
-  limit: 20,
-  hub: '',
+var config = hexo.config.mailchimp = assign({
+  type: 'rss2',
   content: true
-}, hexo.config.feed);
-
-var type = config.type.toLowerCase();
-
-// Check feed type
-if (type !== 'atom' && type !== 'rss2') {
-  config.type = 'atom';
-} else {
-  config.type = type;
-}
+}, hexo.config.mailchimp);
 
 // Set default feed path
 if (!config.path) {
@@ -30,4 +19,4 @@ if (!pathFn.extname(config.path)) {
   config.path += '.xml';
 }
 
-hexo.extend.generator.register('feed', require('./lib/generator'));
+hexo.extend.generator.register('mailchimp', require('./lib/generator'));
