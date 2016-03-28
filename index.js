@@ -6,6 +6,7 @@ var pathFn = require('path');
 
 var config = hexo.config.mailchimp = assign({
   type: 'rss2',
+  limit: 5,
   content: true
 }, hexo.config.mailchimp);
 

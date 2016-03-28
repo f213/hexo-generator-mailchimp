@@ -3,7 +3,7 @@
   <title>{{ config.title }}</title>
   {% if config.subtitle %}<subtitle>{{ config.subtitle }}</subtitle>{% endif %}
   <link href="{{ feed_url | uriencode }}" rel="self"/>
-  {% if config.feed.hub %}<link href="{{ config.feed.hub | uriencode }}" rel="hub"/>{% endif %}
+  {% if config.mailchimp.hub %}<link href="{{ config.mailchimp.hub | uriencode }}" rel="hub"/>{% endif %}
   <link href="{{ url | uriencode }}"/>
   <updated>{{ posts.first().updated.toISOString() }}</updated>
   <id>{{ url }}</id>
@@ -21,7 +21,7 @@
     <id>{{ url + post.path }}</id>
     <published>{{ post.date.toISOString() }}</published>
     <updated>{{ post.updated.toISOString() }}</updated>
-    {% if config.feed.content and post.content %}
+    {% if config.mailchimp.content and post.content %}
     <content type="html"><![CDATA[{{ post.content | safe }}]]></content>
     {% endif %}
     <summary type="html">
